@@ -10,10 +10,47 @@
     <link rel="icon" href="https://www.ffffinished.github.io/favicon.ico" type="image/x-icon">
     <!-- ^^CHANGE WHEN URL ACCESS -->
     <script async defer data-domain="jacobhl.com" src="https://plausible.io/js/plausible.js"></script>
-</head>
+
+    <style>
+      /* body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      } */
+
+      .logo-container {
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+      }
+
+      .logo {
+        width: 150px; /* Adjust to your preferred size */
+        height: auto;
+        transition: opacity 1s ease; /* Optional: add fade effect during swap */
+      }
+    </style>
+
+
+  </head>
+
+
+
 <body class="is-preload">
 <header id="header">
     <center>
+        <div class="logo-container">
+          <img id="logo" src="images/logo1.png" alt="Logo" class="logo">    
+          <!-- make logo clickable to his instagram -->
+          <!-- REMOVE 
+           ALL STYLE ABOVE, 
+           SCRIPT AT BOTTOM, 
+           AND THIS LOGO LINE TO GO BACK TO MY ORIGINAL FORMAT -->
+        </div>
+<br>
         <h1><i>far from finished</i></h1>
         <p>
             logo design and merchandising coming soon
@@ -22,6 +59,7 @@
             automation, data visualization, and user experience.
             <br> -->
         </p>
+
         <h4>
             <a style="font-size: 32px;" target="_blank" href="https://www.instagram.com/yourusername"><i class="fab fa-instagram"></i></a>&nbsp;&nbsp;&nbsp;
             <!-- <a style="font-size: 32px;" target="_blank" href="https://www.github.com/jacobhl3ca"><i class="fab fa-github"></i></a>&nbsp;&nbsp;&nbsp; -->
@@ -31,5 +69,21 @@
     </center>
 </header>
 <script src="assets/js/main.js"></script>
+<script>
+  let logoIndex = 0;
+  const logos = ["images/logo1.png", "images/logo2.png"];  // Array containing the logos' filenames
+  const logoElement = document.getElementById('logo');
+
+  function swapLogo() {
+    // Toggle the logo based on the index
+    logoElement.src = logos[logoIndex];
+    
+    // Update the index (switch between 0 and 1)
+    logoIndex = (logoIndex + 1) % logos.length;
+  }
+
+  // Set an interval to swap the logo every 3 seconds
+  setInterval(swapLogo, 3000);
+</script>
 </body>
 </html>
