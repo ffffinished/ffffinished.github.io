@@ -1,2 +1,0 @@
-# ffffinished.github.io
-website
