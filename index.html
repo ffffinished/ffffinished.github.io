@@ -1,70 +1,85 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>
+    <title>farfromfinished</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <title>farfromfinished</title>
     <script src="https://use.fontawesome.com/e7096b8981.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/css/main.css"/>
     <link rel="icon" href="https://www.farfromfinished.github.io/favicon.ico" type="image/x-icon">
     <!-- CHANGE WHEN URL IS fffinished.com -->
     <script async defer data-domain="jacobhl.com" src="https://plausible.io/js/plausible.js"></script>
-
     <style>
         body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          margin: 0;
-          background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #333333; /* CHANGED BACKGROUND TO SLEEK GREY */
+            color: white; /* ADDED: Improved text visibility on grey background */
+            /* font-family: 'Oswald', sans-serif; ADDED: Applied Oswald font */
         }
 
         .logo-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* ADDED: Ensures the content is stacked vertically */
+            text-align: center; /* ADDED: Centers the content */
         }
 
         .logo {
-          width: 250px; /* Adjust to your preferred size */
-          height: auto;
-          transition: opacity 1s ease; /* Optional: add fade effect during swap */
+            width: 250px; /* Adjust to your preferred size */
+            height: auto;
+            transition: opacity 1s ease; /* Optional: add fade effect during swap */
         }
+
+        h4 {
+            margin-top: 10px; /* ADDED: Adds a little space above the envelope icon */
+        }
+
+        p {
+            margin-top: 10px; /* ADDED: Adds some space between the description and email */
+        }
+
     </style>
 </head>
+
 <body class="is-preload">
+
 <header id="header">
-    <center>
-        <div class="logo-container">
-            <!-- Make logo clickable to Instagram -->
-            <a href="https://www.instagram.com/yourusername" target="_blank">
-                <img id="logo" src="images/logo1.png" alt="Logo" class="logo">
-            </a>
-        </div>
+    <div class="logo-container">
+        <img id="logo" src="images/logo1.png" alt="Logo" class="logo">    
+        <!-- make logo clickable to his instagram -->
         <p>
-            <i>logo design and merchandising coming soon</i>
-        </p>
-    </center>
+          <i>logo design and merchandising coming soon</i>
+        </p> 
+        <h4>
+          <a style="font-size: 32px;" target="_blank" href="mailto:infffo@fffinished.com"><i class="fas fa-envelope"></i></a>
+        </h4>
+    </div>
 </header>
 
 <script src="assets/js/main.js"></script>
+
 <script>
-    let logoIndex = 0;
-    const logos = ["images/logo1.png", "images/logo2.png"];  // Array containing the logos' filenames
-    const logoElement = document.getElementById('logo');
+  let logoIndex = 0;
+  const logos = ["images/logo1.png", "images/logo2.png"];  // Array containing the logos' filenames
+  const logoElement = document.getElementById('logo');
 
-    function swapLogo() {
-        // Toggle the logo based on the index
-        logoElement.src = logos[logoIndex];
-        
-        // Update the index (switch between 0 and 1)
-        logoIndex = (logoIndex + 1) % logos.length;
-    }
+  function swapLogo() {
+    // Toggle the logo based on the index
+    logoElement.src = logos[logoIndex];
+    
+    // Update the index (switch between 0 and 1)
+    logoIndex = (logoIndex + 1) % logos.length;
+  }
 
-    // Set an interval to swap the logo every 3 seconds
-    setInterval(swapLogo, 3000);
+  // Set an interval to swap the logo every 3 seconds
+  setInterval(swapLogo, 3000);
 </script>
+
 </body>
 </html>
