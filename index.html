@@ -1,16 +1,15 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-    <title>farfromfinished</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <title>farfromfinished</title>
     <script src="https://use.fontawesome.com/e7096b8981.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/main.css"/>
     <link rel="icon" href="https://www.farfromfinished.github.io/favicon.ico" type="image/x-icon">
     <!-- CHANGE WHEN URL IS fffinished.com -->
     <script async defer data-domain="jacobhl.com" src="https://plausible.io/js/plausible.js"></script>
-
 
     <style>
         body {
@@ -33,48 +32,39 @@
           height: auto;
           transition: opacity 1s ease; /* Optional: add fade effect during swap */
         }
-      </style>
-
+    </style>
 </head>
 <body class="is-preload">
 <header id="header">
     <center>
-
-
         <div class="logo-container">
-            <img id="logo" src="images/logo1.png" alt="Logo" class="logo">    
-
-<!-- make logo clickable to his instagram -->
-
+            <!-- Make logo clickable to Instagram -->
+            <a href="https://www.instagram.com/yourusername" target="_blank">
+                <img id="logo" src="images/logo1.png" alt="Logo" class="logo">
+            </a>
         </div>
-<p>
-             <i>coming soon, thank you for your patience</i>
-</p>
-         
-
-
-<!--         <h4>
-            <a style="font-size: 32px;" target="_blank" href="mailto:infffo@fffinished.com"><i class="fas fa-envelope"></i></a>
-        </h4> -->
-
+        <p>
+            <i>logo design and merchandising coming soon</i>
+        </p>
     </center>
 </header>
+
 <script src="assets/js/main.js"></script>
- <script>
+<script>
     let logoIndex = 0;
     const logos = ["images/logo1.png", "images/logo2.png"];  // Array containing the logos' filenames
     const logoElement = document.getElementById('logo');
 
     function swapLogo() {
-      // Toggle the logo based on the index
-      logoElement.src = logos[logoIndex];
-      
-      // Update the index (switch between 0 and 1)
-      logoIndex = (logoIndex + 1) % logos.length;
+        // Toggle the logo based on the index
+        logoElement.src = logos[logoIndex];
+        
+        // Update the index (switch between 0 and 1)
+        logoIndex = (logoIndex + 1) % logos.length;
     }
 
     // Set an interval to swap the logo every 3 seconds
     setInterval(swapLogo, 3000);
-  </script>
+</script>
 </body>
 </html>
